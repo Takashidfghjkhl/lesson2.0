@@ -37,32 +37,32 @@ print("""Ты завершил испытание, можешь проследо
 4. ковер-самолёт 30 points
 5. пропустить""")
 choice = input("твой выбор:")
-if choice == "1" and points > 13:
+if choice == "1" and points >= 13:
     points-=13
     print("Теперь у тебя есть молодильное яблоко!")
-elif choice == "2" and points > 27:
+elif choice == "2" and points >= 27:
     points-=27
     print("Теперь у тебя есть волшебный кубок!")
-elif choice == "3" and points > 14:
+elif choice == "3" and points >= 14:
     points-=14
     print("Теперь у тебя есть мороженое!")
-elif choice == "4" and points > 30:
+elif choice == "4" and points >= 30:
     points-=30
     print("Теперь у тебя есть ковёр самолёт!")
 elif choice == "5":
     print("Заходите ещё!")
 else:
     print("Недостаточно очков")
-
+print(f"Твой счёт: {points} очков")
 if artifact_one and artifact_two and artifact_three:
-    print("Поздравляем, ты победил! счёт: 60 очкрв")
+    print("Поздравляем, ты победил!")
 elif artifact_one and artifact_two:
-    print(f"К сожалению, ты не нашёл третий артефакт. счёт: {points} очков")
+    print(f"К сожалению, ты не нашёл третий артефакт.")
 elif artifact_one and artifact_three:
-    print(f"К сожалению, ты не нашёл второй артефакт. счёт: {points} очков")
+    print(f"К сожалению, ты не нашёл второй артефакт.")
 elif artifact_two and artifact_three:
-    print(f"К сожалению, ты не нашёл первый артефакт. счёт: {points} очков")
+    print(f"К сожалению, ты не нашёл первый артефакт.")
 elif artifact_two or artifact_three or artifact_one:
-    print(f"К сожалению, ты не нашёл два артифакта. счёт: {points} очков")
+    print(f"К сожалению, ты не нашёл два артифакта.")
 else:
     print("Ты не нашёл ни одного артифакта")
